@@ -1,0 +1,29 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+#lucky_list:
+ # path: /lucky/number
+  #defaults: {_controller AppBundle:Lucky:list}
+
+
+#lucky_show:
+ # path: /lucky/number/{slug}
+  #defaults: {_controller AppBundle:Lucky:show}
+
+rio_list:
+  path: /rio/{page}
+  defaults: {_controller AppBundle:Rio:list, page:1}
+  requirements: 
+    page: '\d+'
+
+rio_show:
+  path: /rio/{slug}
+  defaults: {_controller AppBundle:Rio:show}  
+
+lucky_teste:
+  path: /lucky/teste
+  defaults: {_controller AppBundle:Lucky:teste}  
